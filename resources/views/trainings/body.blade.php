@@ -7,6 +7,8 @@
     <meta name="description" content="Агенство">
     <meta name="keywords" content="">
     <title>Тело твоей мечты</title>
+    <link rel="shortcut icon" type="image/png" href="{{asset('body.png')}}"/>
+    <link rel="shortcut icon" type="image/png" href="http://eg.com/body.png"/>
 
     <link href="{{asset('css/bootstrap.min.css')}}" rel="stylesheet">
     <link href="{{asset('css/style-body.css')}}" rel="stylesheet">

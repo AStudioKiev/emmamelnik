@@ -1,7 +1,9 @@
 @extends('layouts.main')
 
-@section('title')
+@section('head-center')
     <title>Emma Melnik</title>
+    <link rel="shortcut icon" type="image/png" href="{{asset('emma.png')}}"/>
+    <link rel="shortcut icon" type="image/png" href="http://eg.com/emma.png"/>
 @stop
 
 @section('body')

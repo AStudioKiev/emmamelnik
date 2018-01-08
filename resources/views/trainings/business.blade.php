@@ -7,6 +7,8 @@
     <meta name="description" content="Агенство">
     <meta name="keywords" content="">
     <title>Как начать свое дело</title>
+    <link rel="shortcut icon" type="image/png" href="{{asset('business.png')}}"/>
+    <link rel="shortcut icon" type="image/png" href="http://eg.com/business.png"/>
 
     <link href="{{asset('css/bootstrap.min.css')}}" rel="stylesheet">
     <link href="{{asset('css/style-business.css')}}" rel="stylesheet">
@@ -131,9 +133,9 @@
                     <span>Создатель четырёх бизнесов, опытный управляющий. Владелец-руководитель студии танцев, тренингового центра , вебстудии.</span>
 
                     <ul>
-                        <li><a href="#">web-site.kiev.ua</a></li>
-                        <li><a href="#">studio-angels.com</a></li>
-                        <li><a href="#">emmamelnik.com</a></li>
+                        <li><a href="https://web-site.kiev.ua" target="_blank">web-site.kiev.ua</a></li>
+                        <li><a href="https://studio-angels.com" target="_blank">studio-angels.com</a></li>
+                        <li><a href="https://emmamelnik.com" target="_blank">emmamelnik.com</a></li>
                     </ul>
 
                     <span>Автор и лектор 7-ми тренингов. Спортивный тренер и судья. Личный консультант владельцев малого бизнеса</span></div>
@@ -227,7 +229,7 @@
             if (http.readyState == 4 && http.status == 200) {
                 alert(http.responseText + 'Ваше сообщение получено.\nНаши специалисты ответят Вам в течении часа.\nБлагодарим за интерес к нашим услугам');
             }
-        }
+        };
         http.onerror = function() {
             alert('Извините, данные не были переданы');
         }
@@ -243,7 +245,7 @@
             if (http.readyState == 4 && http.status == 200) {
                 alert(http.responseText + 'Ваше сообщение получено.\nНаши специалисты ответят Вам в течении часа.\nБлагодарим за интерес к нашим услугам');
             }
-        }
+        };
         http.onerror = function() {
             alert('Извините, данные не были переданы');
         }
@@ -259,7 +261,7 @@
             if (http.readyState == 4 && http.status == 200) {
                 alert(http.responseText + 'Ваше сообщение получено.\nНаши специалисты ответят Вам в течении часа.\nБлагодарим за интерес к нашим услугам');
             }
-        }
+        };
         http.onerror = function() {
             alert('Извините, данные не были переданы');
         }

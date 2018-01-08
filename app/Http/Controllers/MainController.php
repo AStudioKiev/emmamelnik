@@ -11,7 +11,8 @@ class MainController extends Controller
 {
     public function index()
     {
-        return view('index');
+        $pageComments = PageComment::wherePage('index')->get();
+        return view('index', compact('pageComments'));
     }
 
     public function consultancies()
