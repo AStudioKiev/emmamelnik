@@ -1,5 +1,9 @@
 @extends('layouts.main')
 
+@section('title')
+    <title>Emma Melnik</title>
+@stop
+
 @section('head-begin')
     <!— Global site tag (gtag.js) - Google Analytics —>
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-101921000-1"></script>
@@ -16,10 +20,10 @@
     <div class="top-block">
         <div class="white-texture">
             <ul id="mobile_nav" class="mobile-hidden">
-                <li><a class="scroll" href="index.html">Главная</a></li>
-                <li><a class="scroll" href="consulties.html">Консультации</a></li>
-                <li><a class="scroll" href="trainings.html">Тренинги</a></li>
-                <li><a class="scroll" href="blog.php">Блог</a></li>
+                <li><a class="scroll" href="{{url('/')}}">Главная</a></li>
+                <li><a class="scroll" href="{{url('/consultancies')}}">Консультации</a></li>
+                <li><a class="scroll" href="{{url('/trainings')}}">Тренинги</a></li>
+                <li><a class="scroll" href="{{url('/blog')}}">Блог</a></li>
 
                 <div id="toggle_nav" onclick="showNav();"><img src="img/menu-button.svg" alt=""></div>
             </ul>
@@ -28,10 +32,10 @@
 
             <div class="container-md">
                 <nav class="top-nav">
-                    <li><a href="index.html">Главная</a></li>
-                    <li><a href="consulties.html">Консультации</a></li>
-                    <li><a href="trainings.html">Тренинги</a></li>
-                    <li><a href="blog.php">Блог</a></li>
+                    <li><a href="{{url('/')}}">Главная</a></li>
+                    <li><a href="{{url('/consultancies')}}">Консультации</a></li>
+                    <li><a href="{{url('/trainings')}}">Тренинги</a></li>
+                    <li><a href="{{url('/blog')}}">Блог</a></li>
 
                     <img src="img/lamp.png" alt="" class="lamp-img">
                 </nav>
@@ -144,8 +148,4 @@
             <p class="mar-tp-2 mar-bt-0"><a href="https://www.instagram.com/emmamelnik/" target="_blank"><span>Instagram</span><img class="mar-lt-3" src="img/instagram_logo.png" alt="" width="33px;"></a></p>
         </div>
     </footer>
-@stop
-
-@section('js-section')
-    <script src="js/mine.js"></script>
 @stop
