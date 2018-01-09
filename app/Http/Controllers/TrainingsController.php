@@ -22,4 +22,9 @@ class TrainingsController extends Controller
         $pageComments = PageComment::wherePage('business')->get();
         return view('trainings.business', compact('pageComments'));
     }
+
+    public function identification()
+    {
+        return view('trainings.identification');
+    }
 }

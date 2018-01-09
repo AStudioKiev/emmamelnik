@@ -14,6 +14,7 @@ Route::group(['prefix' => 'trainings'], function (){
 
     Route::get('/body', 'TrainingsController@body');
     Route::get('/business', 'TrainingsController@business');
+    Route::get('/identification', 'TrainingsController@identification');
 });
 
 Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function (){
