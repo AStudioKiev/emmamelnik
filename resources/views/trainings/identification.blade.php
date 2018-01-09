@@ -8,30 +8,30 @@
     <meta name="keywords" content="">
     <title>Идентификация</title>
 
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/style-identification.css" rel="stylesheet">
+    <link href="{{asset('css/bootstrap.min.css')}}" rel="stylesheet">
+    <link href="{{asset('css/style-identification.css')}}" rel="stylesheet">
     <meta name="theme-color" content="#ffffff">
     <style type="text/css" media="screen, print">
         @font-face {
             font-family: "Amaticsc_reg";
-            src: url("fonts/AMATICSC-REGULAR.TTF");
+            src: url("{{asset('fonts/AMATICSC-REGULAR.TTF')}}");
         }
         @font-face {
             font-family: "Amaticsc_bold";
-            src: url("fonts/AMATICSC-BOLD.TTF");
+            src: url("{{asset('fonts/AMATICSC-BOLD.TTF')}}");
         }
     </style>
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
-    <script src="js/jquery.appear.js"></script>
+    <script src="{{asset('js/jquery.appear.js')}}"></script>
 </head>
 
 <body>
 <div class="main-bg">
     <div class="top-header-holder">
-        <div class="top-header"><img src="img/1block_ident.png" alt="" width="100%"></div>
+        <div class="top-header"><img src="{{asset('img/1block_ident.png')}}" alt="" width="100%"></div>
     </div>
 
     <div class="questions-block multi-border">
@@ -39,29 +39,29 @@
             <span>У каждого человека наступает момент в жизни, когда возникает много философских вопросов без определенных ответов. Это разные периоды и ситуации. В эти моменты нельзя обратиться к энциклопедиям или законам, чтоб узнать, как поступать.</span>
         </div>
 
-        <div class="img-text-left"><img src="img/ident_point1.png" alt=""></div>
-        <div class="img-text-right"><img src="img/ident_point2.png" alt=""></div>
-        <div class="img-text-left"><img src="img/ident_point3.png" alt=""></div>
-        <div class="img-text-right"><img src="img/ident_point4.png" alt=""></div>
-        <div class="img-text-left"><img src="img/ident_point5.png" alt=""></div>
-        <div class="img-text-right"><img src="img/ident_point6.png" alt=""></div>
+        <div class="img-text-left"><img src="{{asset('img/ident_point1.png')}}" alt=""></div>
+        <div class="img-text-right"><img src="{{asset('img/ident_point2.png')}}" alt=""></div>
+        <div class="img-text-left"><img src="{{asset('img/ident_point3.png')}}" alt=""></div>
+        <div class="img-text-right"><img src="{{asset('img/ident_point4.png')}}" alt=""></div>
+        <div class="img-text-left"><img src="{{asset('img/ident_point5.png')}}" alt=""></div>
+        <div class="img-text-right"><img src="{{asset('img/ident_point6.png')}}" alt=""></div>
     </div>
 
     <div class="inner-description">
         <div class="position-dispaced">
             <span>Каждый наставник вам скажет, что ответы на эти вопросы знаешь только ты сам. И то что они находятся внутри тебя. И как же их найти? Вообще возникновение этих вопросов это точный знак, что наступило время идентифицировать себя. Ответить на вопрос «кто я?». И тогда все остальные ответы придут сами и практически сразу.</span>
 
-            <img class="quotes-ident-lt" src="img/qotes_ident.png" alt="" width="30px">
-            <img class="quotes-ident-rt" src="img/qotes_ident_rt.png" alt="" width="30px">
+            <img class="quotes-ident-lt" src="{{asset('img/qotes_ident.png')}}" alt="" width="30px">
+            <img class="quotes-ident-rt" src="{{asset('img/qotes_ident_rt.png')}}" alt="" width="30px">
         </div>
 
-        <div class="photo-displaced"><img src="img/photo_displaced.png" alt="" width="100%;"></div>
+        <div class="photo-displaced"><img src="{{asset('img/photo_displaced.png')}}" alt="" width="100%;"></div>
     </div>
 
     <div class="program-block">
         <p class="md-header">На тренинге предоставлена программа, благодаря которой мы разбираем:</p>
 
-        <div class="program-circle"><img src="img/circle_program.png" alt="" width="100%"></div>
+        <div class="program-circle"><img src="{{asset('img/circle_program.png')}}" alt="" width="100%"></div>
 
         <div class="program-sm">
             <ul class="program-list-sm">
@@ -74,8 +74,8 @@
                 <li>Распознание ложных и искренних желаний</li>
             </ul>
 
-            <div class="light-float-lt"><img src="img/light_lt.png" alt="" width="100%"></div>
-            <div class="light-float-rt"><img src="img/light.png" alt="" width="100%"></div>
+            <div class="light-float-lt"><img src="{{asset('img/light_lt.png')}}" alt="" width="100%"></div>
+            <div class="light-float-rt"><img src="{{asset('img/light.png')}}" alt="" width="100%"></div>
         </div>
     </div>
 
@@ -102,7 +102,7 @@
 
     <div class="question-block">
         <div class="positioned-text">
-            <img src="img/faq_ident.png" alt="" width="100%">
+            <img src="{{asset('img/faq_ident.png')}}" alt="" width="100%">
             <span>Идентификация это твой шанс на совершенно другую жизнь! На твою жизнь!</span>
         </div>
         <div class="address-holder">
@@ -142,7 +142,7 @@
 </div>
 </body>
 
-<script src="js/mine.js"></script>
+<script src="{{asset('js/mine.js')}}"></script>
 <script>
     document.getElementById('contactModal').addEventListener('submit', function(evt){
         var http = new XMLHttpRequest(), f = this;
