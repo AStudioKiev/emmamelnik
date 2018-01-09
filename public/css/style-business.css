@@ -179,6 +179,7 @@ a, a:hover, a:focus {
     display: table-cell;
     height: 340px;
     vertical-align: middle;
+    padding: 0 20px;
 }
 .point-holder {
     vertical-align: top;
@@ -252,8 +253,10 @@ a, a:hover, a:focus {
     position: absolute;
     top: 18px;
     left: 50%;
-    width: 542px;
+    width: 100%;
+    max-width: 542px;
     margin-left: -271px;
+    z-index: 99999;
 }
 .float-header>* {
     display: inline-block;
@@ -1004,6 +1007,93 @@ a, a:hover, a:focus {
         line-height: 1;
         padding: 10px 0;
         font-size: 16px;
+    }
+    .bordered-info {
+        margin-right: 0;
+        margin-left: 0;
+    }
+    .negative-info-holder {
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .info-container .image-holder, .info-container .image-holder>img {
+        height: auto;
+        width: 100%;
+        margin-bottom: 30px;
+        padding: 0 20px;
+    }
+    .negative-info-holder__1 .negative-indent {
+        padding-right: 0;
+    }
+    .info-container {
+        padding: 20px;
+    }
+    .padding-adaptive, .negative-info-holder__2, .negative-info-holder__3 {
+        display: block;
+        position: static;
+        float: none;
+        width: 100%;
+        padding-left: 0;
+        padding-right: 0;
+        max-width: 470px;
+        margin: 60px auto;
+    }
+    .negative-info-holder__1 .negative-indent .lg-caps {
+        margin-left: 0;
+    }
+    .negative-info-holder__2 .negative-indent {
+        text-indent: 0;
+    }
+    .negative-info-holder__2 .lg-caps {
+        position: static;
+    }
+    .info-holder {
+        margin: 0 auto;
+        max-width: 100%!important;
+        text-align: center;
+        font-size: 16px;
+    }
+    .emma-header {
+        margin: 30px auto;
+    }
+    .lg-label-left {
+        padding-left: 0;
+        text-align: center;
+        height: 390px;
+    }
+    .overflowed-image-holder {
+        display: none;
+    }
+    .point-holder {
+        display: block;
+        margin: 20px auto;
+    }
+    .photo-holder {
+        margin: 20px auto;
+        width: 100%;
+        max-width: 100%;
+        text-align: center;
+        padding: 0 20px 0 0;
+    }
+    .bordered-info {
+        padding: 50px 30px;
+        text-align: justify;
+    }
+    .mark-rotate {
+        bottom: 15px;
+    }
+    .offers-points {
+        padding: 50px 20px;
+    }
+    .for-whom-img {
+        padding-right: 0;
+    }
+    .float-header {
+        left: 0;
+        margin-left: 0;
+    }
+    .float-header>img {
+        display: none;
     }
 }
 @media screen and (max-width: 600px) {

@@ -100,6 +100,7 @@
 
                     <p class="blue-question">Кому?</p>
                     <p class="regular-lg">Всем, кто хочет расти, развиваться и двигаться вперёд.</p>
+                    <a href="{{url('/trainings/identification')}}" target="_blank" class="btn-more-holder"><button type="button" class="btn-more-training"></button></a>
 
                     <p class="regular-lg mar-tp-2">Длительность - 8 часа</p>
                 </div>
