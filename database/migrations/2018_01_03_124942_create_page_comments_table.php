@@ -14,7 +14,7 @@ class CreatePageCommentsTable extends Migration
     {
         Schema::create('page_comments', function (Blueprint $table) {
             $table->increments('id');
-            $table->enum('page', ['index', 'body', 'business']);
+            $table->enum('page', ['index', 'body', 'business', 'command', 'woman', 'identification', 'owner']);
             $table->string('author');
             $table->text('comment');
             $table->timestamps();

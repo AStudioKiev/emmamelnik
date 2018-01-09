@@ -9,9 +9,13 @@
                 <div class="select form-group mar-tp-1 mar-bt-2">
                     <select name="page">
                         <option disabled>Выберите страницу</option>
-                        <option value="index">index</option>
-                        <option value="body">body</option>
-                        <option value="business">business</option>
+                        <option value="index">Главная(index)</option>
+                        <option value="body">Тело мечты(body)</option>
+                        <option value="business">Как начать своё дело(business)</option>
+                        <option value="command">Команда(command)</option>
+                        <option value="woman">Женственность(woman)</option>
+                        <option value="identification">Идентификация(identification)</option>
+                        <option value="owner">Владелец +(owner)</option>
                     </select>
                 </div>
                 <div class="select form-group mar-tp-1 mar-bt-2">

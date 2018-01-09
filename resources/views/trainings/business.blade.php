@@ -159,36 +159,13 @@
 
                 <div id="carouselBusiness" class="carousel slide" data-ride="carousel">
                     <div class="carousel-inner" role="listbox">
-                        <div class="carousel-item active">
+                        @for($i = 0; $i < count($pageComments); $i++)
+                        <div class="carousel-item @if($i == 0) active @endif">
                             <div>
-                                <span>Вашу готовность к управлению бизнесом</span>
+                                <span>{{$pageComments[$i]->comment}}</span>
                             </div>
                         </div>
-                        <div class="carousel-item">
-                            <div>
-                                <span>Чего не хватает для старта</span>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <div>
-                                <span>Что нужно для того чтоб бизнес сразу работал на прибыль</span>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <div>
-                                <span>Где взять первоначальный взнос</span>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <div>
-                                <span>Как написать работающий бизнес-план</span>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <div>
-                                <span>Самые повторяющиеся вопросы</span>
-                            </div>
-                        </div>
+                        @endfor
                     </div>
 
                     <a class="carousel-control-prev" href="#carouselBusiness" role="button" data-slide="prev">

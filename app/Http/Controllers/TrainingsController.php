@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\PageComment;
 use Illuminate\Http\Request;
 
 class TrainingsController extends Controller
@@ -18,6 +19,7 @@ class TrainingsController extends Controller
 
     public function business()
     {
-        return view('trainings.business');
+        $pageComments = PageComment::wherePage('business')->get();
+        return view('trainings.business', compact('pageComments'));
     }
 }
