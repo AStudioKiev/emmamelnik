@@ -124,7 +124,7 @@
         </div>
     </div>
 
-    <form action="contactForm.php" method="post" id="contactForm" class="form">
+    <form action="{{url('/contactForm')}}" method="post" id="contactForm" class="form">
         <div class="select-wrapper">
             <div class="select form-group mar-bt-2">
                 <input type="text" id="nameInput" name="name" x-autocompletetype="name" required placeholder="имя" class="form-control input-field">
@@ -136,6 +136,8 @@
                 <input type="email" id="emailInput" name="email" required placeholder="E-mail" class="form-control input-field">
             </div>
         </div>
+
+        <input type="hidden" name="page" value="Идентификация">
 
         <input type="submit" class="large-btn zero" value="Зарегистрироваться">
     </form>

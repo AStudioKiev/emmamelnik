@@ -19,7 +19,7 @@
                     </select>
                 </div>
                 <div class="select form-group mar-tp-1 mar-bt-2">
-                    <input type="text" name="author" required placeholder="Автор" class="form-control input-field">
+                    <input type="text" name="author" placeholder="Автор" class="form-control input-field">
                 </div>
                 <div class="select-wrapper mar-bt-1">
                     <textarea id="text" rows="7" name="comment" placeholder="Комментарий" class="textarea-field"></textarea>
