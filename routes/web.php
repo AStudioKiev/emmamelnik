@@ -7,6 +7,7 @@ Route::get('/blog', 'MainController@blog');
 Route::get('/article/{id}', 'MainController@article');
 Route::get('/consultancies', 'MainController@consultancies');
 Route::post('/get-page-comment', 'MainController@getComments');
+Route::post('/contactForm', 'MainController@contactForm');
 
 Route::group(['prefix' => 'trainings'], function (){
     Route::get('/', 'TrainingsController@trainings');

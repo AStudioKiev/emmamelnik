@@ -49,6 +49,8 @@
                             </div>
                         </div>
 
+                        <input type="hidden" name="page" value="Как начать свое дело">
+
                         <input type="submit" role="button" class="lg-btn red-btn" value="Зарегистрироваться">
                     </form>
                 </div>
@@ -195,54 +197,5 @@
 </body>
 
 <script src="{{asset('js/mine.js')}}"></script>
-<script>
-    document.getElementById('contactModal').addEventListener('submit', function(evt){
-        var http = new XMLHttpRequest(), f = this;
-        evt.preventDefault();
-        http.open("POST", "contactForm.php", true);
-        http.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-        http.send("name=" + f.name.value + "&email=" + f.email.value);
-        http.onreadystatechange = function() {
-            if (http.readyState == 4 && http.status == 200) {
-                alert(http.responseText + 'Ваше сообщение получено.\nНаши специалисты ответят Вам в течении часа.\nБлагодарим за интерес к нашим услугам');
-            }
-        };
-        http.onerror = function() {
-            alert('Извините, данные не были переданы');
-        }
-    }, false);
-
-    document.getElementById('contactFormBottom').addEventListener('submit', function(evt){
-        var http = new XMLHttpRequest(), f = this;
-        evt.preventDefault();
-        http.open("POST", "contactForm.php", true);
-        http.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-        http.send("name=" + f.name.value + "&email=" + f.email.value);
-        http.onreadystatechange = function() {
-            if (http.readyState == 4 && http.status == 200) {
-                alert(http.responseText + 'Ваше сообщение получено.\nНаши специалисты ответят Вам в течении часа.\nБлагодарим за интерес к нашим услугам');
-            }
-        };
-        http.onerror = function() {
-            alert('Извините, данные не были переданы');
-        }
-    }, false);
-
-    document.getElementById('contactForm').addEventListener('submit', function(evt){
-        var http = new XMLHttpRequest(), f = this;
-        evt.preventDefault();
-        http.open("POST", "contactForm.php", true);
-        http.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-        http.send("name=" + f.name.value + "&email=" + f.email.value);
-        http.onreadystatechange = function() {
-            if (http.readyState == 4 && http.status == 200) {
-                alert(http.responseText + 'Ваше сообщение получено.\nНаши специалисты ответят Вам в течении часа.\nБлагодарим за интерес к нашим услугам');
-            }
-        };
-        http.onerror = function() {
-            alert('Извините, данные не были переданы');
-        }
-    }, false);
-</script>
 
 </html>

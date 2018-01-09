@@ -77,6 +77,8 @@
                             </div>
                         </div>
 
+                        <input type="hidden" name="page" value="Как начать свое дело">
+
                         <input type="submit" role="button" class="lg-btn red-btn mobile-btn" value="Зарегистрироваться" data-toggle="modal" data-target="#myModal">
                         <input type="submit" role="button" class="lg-btn red-btn" value="Зарегистрироваться">
                     </form>
@@ -212,6 +214,8 @@
                                 <input type="email" id="emailB" name="email" placeholder="e-mail" required="required" class="form-control input-field">
                             </div>
                         </div>
+
+                        <input type="hidden" name="page" value="Тело мечты">
 
                         <input type="submit" role="button" class="lg-btn red-btn" value="Зарегистрироваться">
                     </form>
