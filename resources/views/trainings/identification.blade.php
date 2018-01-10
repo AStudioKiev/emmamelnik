@@ -22,7 +22,7 @@
         }
     </style>
 
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
     <script src="{{asset('js/jquery.appear.js')}}"></script>
@@ -124,7 +124,7 @@
         </div>
     </div>
 
-    <form action="{{url('/contactForm')}}" method="post" id="contactForm" class="form">
+    <form method="post" id="contactForm" class="form">
         <div class="select-wrapper">
             <div class="select form-group mar-bt-2">
                 <input type="text" id="nameInput" name="name" x-autocompletetype="name" required placeholder="имя" class="form-control input-field">
@@ -145,54 +145,27 @@
 </body>
 
 <script src="{{asset('js/mine.js')}}"></script>
-<script>
-    document.getElementById('contactModal').addEventListener('submit', function(evt){
-        var http = new XMLHttpRequest(), f = this;
-        evt.preventDefault();
-        http.open("POST", "contactForm.php", true);
-        http.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-        http.send("name=" + f.name.value + "&email=" + f.email.value);
-        http.onreadystatechange = function() {
-            if (http.readyState == 4 && http.status == 200) {
-                alert(http.responseText + 'Ваше сообщение получено.\nНаши специалисты ответят Вам в течении часа.\nБлагодарим за интерес к нашим услугам');
-            }
-        }
-        http.onerror = function() {
-            alert('Извините, данные не были переданы');
-        }
-    }, false);
 
-    document.getElementById('contactFormBottom').addEventListener('submit', function(evt){
-        var http = new XMLHttpRequest(), f = this;
-        evt.preventDefault();
-        http.open("POST", "contactForm.php", true);
-        http.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-        http.send("name=" + f.name.value + "&email=" + f.email.value);
-        http.onreadystatechange = function() {
-            if (http.readyState == 4 && http.status == 200) {
-                alert(http.responseText + 'Ваше сообщение получено.\nНаши специалисты ответят Вам в течении часа.\nБлагодарим за интерес к нашим услугам');
-            }
-        }
-        http.onerror = function() {
-            alert('Извините, данные не были переданы');
-        }
-    }, false);
+<script type="text/javascript">
+    $("#contactForm").submit(function(e) {
+        e.preventDefault(); // avoid to execute the actual submit of the form.
 
-    document.getElementById('contactForm').addEventListener('submit', function(evt){
-        var http = new XMLHttpRequest(), f = this;
-        evt.preventDefault();
-        http.open("POST", "contactForm.php", true);
-        http.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-        http.send("name=" + f.name.value + "&email=" + f.email.value);
-        http.onreadystatechange = function() {
-            if (http.readyState == 4 && http.status == 200) {
-                alert(http.responseText + 'Ваше сообщение получено.\nНаши специалисты ответят Вам в течении часа.\nБлагодарим за интерес к нашим услугам');
+        var data = {
+            'name': $('#nameInput').val(),
+            'email': $('#emailInput').val()
+        };
+
+        $.ajax({
+            type: "POST",
+            url: '{{url('/contactForm')}}',
+            data: data,
+            error: function () {
+                alert('Извините, данные не были переданы');
+            },
+            success: function(data) {
+                alert(data + 'Ваше сообщение получено.\nБлагодарим за интерес к нашим услугам'); // show response from the php script.
             }
-        }
-        http.onerror = function() {
-            alert('Извините, данные не были переданы');
-        }
-    }, false);
+        });
+    });
 </script>
-
 </html>

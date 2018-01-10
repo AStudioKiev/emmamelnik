@@ -296,6 +296,7 @@ a, a:hover, a:focus {
     box-shadow: 2px -2px 9px 1px rgba(0, 0, 0, 0.9);
     border-radius: .25rem;
     border: none;
+    cursor: pointer;
 }
 .positioned-text-sm, .program-sm {
     display: none;
