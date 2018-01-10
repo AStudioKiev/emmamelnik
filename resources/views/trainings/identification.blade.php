@@ -138,7 +138,6 @@
         </div>
 
         {{ csrf_field() }}
-        <input type="hidden" name="page" value="Идентификация">
 
         <input type="submit" class="large-btn zero" value="Зарегистрироваться">
     </form>
@@ -154,6 +153,7 @@
         var data = {
             name: $('#nameInput').val(),
             email: $('#emailInput').val(),
+            page: 'Идентификация',
             _token: $("input[name*='_token']").val()
         };
 

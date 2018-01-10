@@ -49,8 +49,6 @@
                             </div>
                         </div>
 
-                        <input type="hidden" name="page" value="Как начать свое дело">
-
                         <input type="submit" role="button" class="lg-btn red-btn" value="Зарегистрироваться">
                     </form>
                 </div>
@@ -205,6 +203,7 @@
         var data = {
             name: $('#nameM').val(),
             email: $('#emailM').val(),
+            page: 'Как начать свое дело',
             _token: $("input[name*='_token']").val()
         };
 

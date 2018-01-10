@@ -43,8 +43,6 @@
                                     <input type="email" id="emailM" name="email" placeholder="e-mail" required="required" class="form-control input-field">
                                 </div>
                             </div>
-
-                            <input type="hidden" name="page" value="Тело мечты">
                             {{ csrf_field() }}
 
                             <input type="submit" role="button" class="lg-btn red-btn" value="Зарегистрироваться">
@@ -79,8 +77,6 @@
                                 <input type="email" id="email" name="email" placeholder="e-mail" required="required" class="form-control input-field">
                             </div>
                         </div>
-
-                        <input type="hidden" name="page" value="Тело мечты">
 
                         <input type="submit" role="button" class="lg-btn red-btn mobile-btn" value="Зарегистрироваться" data-toggle="modal" data-target="#myModal">
                         <input type="submit" role="button" class="lg-btn red-btn" value="Зарегистрироваться">
@@ -218,8 +214,6 @@
                             </div>
                         </div>
 
-                        <input type="hidden" name="page" value="Тело мечты">
-
                         <input type="submit" role="button" class="lg-btn red-btn" value="Зарегистрироваться">
                     </form>
                 </div>
@@ -237,6 +231,7 @@
         var data = {
             name: $('#nameM').val(),
             email: $('#emailM').val(),
+            page: 'Тело мечты',
             _token: $("input[name*='_token']").val()
         };
 
@@ -259,6 +254,7 @@
         var data = {
             name: $('#name').val(),
             email: $('#email').val(),
+            page: 'Тело мечты',
             _token: $("input[name*='_token']").val()
         };
 
@@ -281,6 +277,7 @@
         var data = {
             name: $('#nameB').val(),
             email: $('#emailB').val(),
+            page: 'Тело мечты',
             _token: $("input[name*='_token']").val()
         };
 
