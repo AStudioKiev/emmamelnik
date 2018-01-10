@@ -41,9 +41,6 @@ class MainController extends Controller
         $email = trim(strip_tags(Request::get('email')));
         $page = trim(strip_tags(Request::get('page')));
 
-        echo "Page - $page";
-        exit();
-
         mail('astudio0711@gmail.com', "Письмо с '$page'",
             "Вам написал: $name<br />Его email: $email","Content-type:text/html;charset=UTF-8");
 
