@@ -15,7 +15,7 @@
     <meta name="theme-color" content="#ffffff">
 
     <link href="https://fonts.googleapis.com/css?family=Comfortaa:300,400,700&amp;subset=cyrillic" rel="stylesheet">
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
     <script src="{{asset('js/jquery.appear.js')}}"></script>
@@ -31,7 +31,7 @@
                         <button type="button" class="close" data-dismiss="modal">&times;</button>
                     </div>
                     <div class="modal-body">
-                        <form action="{{url('/contactForm')}}" method="post" id="contactModal" class="form">
+                        <form method="post" id="contactModal" class="form">
                             <div class="select-wrapper">
                                 <div class="select form-group mar-bt-2">
                                     <input type="text" id="nameM" name="name" placeholder="имя" required="required" class="form-control input-field bfh-phone">
@@ -43,6 +43,9 @@
                                     <input type="email" id="emailM" name="email" placeholder="e-mail" required="required" class="form-control input-field">
                                 </div>
                             </div>
+
+                            <input type="hidden" name="page" value="Тело мечты">
+                            {{ csrf_field() }}
 
                             <input type="submit" role="button" class="lg-btn red-btn" value="Зарегистрироваться">
                         </form>
@@ -62,7 +65,7 @@
 
                 <div class="image-holder-absolute"><img src="{{asset('img/photoemma.png')}}" alt="" height="100%"></div>
                 <div class="form-holder">
-                    <form action="{{url('/contactForm')}}" method="post" id="contactForm" class="form">
+                    <form method="post" id="contactForm" class="form">
                         <p class="popup-up popup-delayed-4">Как тренировать не только тело , но и дух! Эксклюзивный тренинг от Эммы Мельник</p>
 
                         <div class="select-wrapper">
@@ -77,7 +80,7 @@
                             </div>
                         </div>
 
-                        <input type="hidden" name="page" value="Как начать свое дело">
+                        <input type="hidden" name="page" value="Тело мечты">
 
                         <input type="submit" role="button" class="lg-btn red-btn mobile-btn" value="Зарегистрироваться" data-toggle="modal" data-target="#myModal">
                         <input type="submit" role="button" class="lg-btn red-btn" value="Зарегистрироваться">
@@ -202,7 +205,7 @@
                 <p class="lg-white popup-up">Цена - 200 грн</p>
 
                 <div class="form-holder-bottom">
-                    <form action="{{url('/contactForm')}}" method="post" id="contactFormBottom" class="form">
+                    <form method="post" id="contactFormBottom" class="form">
                         <div class="select-wrapper">
                             <div class="select form-group mar-bt-2">
                                 <input type="text" id="nameB" name="name" placeholder="имя" required="required" class="form-control input-field bfh-phone">
@@ -228,52 +231,70 @@
 <script src="{{asset('js/mine.js')}}"></script>
 
 <script>
-    document.getElementById('contactModal').addEventListener('submit', function(evt){
-        var http = new XMLHttpRequest(), f = this;
-        evt.preventDefault();
-        http.open("POST", "contactForm.php", true);
-        http.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-        http.send("name=" + f.name.value + "&email=" + f.email.value);
-        http.onreadystatechange = function() {
-            if (http.readyState == 4 && http.status == 200) {
-                alert(http.responseText + 'Ваше сообщение получено.\nНаши специалисты ответят Вам в течении часа.\nБлагодарим за интерес к нашим услугам');
-            }
-        }
-        http.onerror = function() {
-            alert('Извините, данные не были переданы');
-        }
-    }, false);
+    $("#contactModal").submit(function(e) {
+        e.preventDefault(); // avoid to execute the actual submit of the form.
 
-    document.getElementById('contactFormBottom').addEventListener('submit', function(evt){
-        var http = new XMLHttpRequest(), f = this;
-        evt.preventDefault();
-        http.open("POST", "contactForm.php", true);
-        http.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-        http.send("name=" + f.name.value + "&email=" + f.email.value);
-        http.onreadystatechange = function() {
-            if (http.readyState == 4 && http.status == 200) {
-                alert(http.responseText + 'Ваше сообщение получено.\nНаши специалисты ответят Вам в течении часа.\nБлагодарим за интерес к нашим услугам');
-            }
-        }
-        http.onerror = function() {
-            alert('Извините, данные не были переданы');
-        }
-    }, false);
+        var data = {
+            name: $('#nameM').val(),
+            email: $('#emailM').val(),
+            _token: $("input[name*='_token']").val()
+        };
 
-    document.getElementById('contactForm').addEventListener('submit', function(evt){
-        var http = new XMLHttpRequest(), f = this;
-        evt.preventDefault();
-        http.open("POST", "contactForm.php", true);
-        http.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-        http.send("name=" + f.name.value + "&email=" + f.email.value);
-        http.onreadystatechange = function() {
-            if (http.readyState == 4 && http.status == 200) {
-                alert(http.responseText + 'Ваше сообщение получено.\nНаши специалисты ответят Вам в течении часа.\nБлагодарим за интерес к нашим услугам');
+        $.ajax({
+            type: "POST",
+            url: '{{url('/contactForm')}}',
+            data: data,
+            error: function () {
+                alert('Извините, данные не были переданы');
+            },
+            success: function(data) {
+                alert(data + 'Ваше сообщение получено.\nБлагодарим за интерес к нашим услугам'); // show response from the php script.
             }
-        }
-        http.onerror = function() {
-            alert('Извините, данные не были переданы');
-        }
-    }, false);
+        });
+    });
+
+    $("#contactForm").submit(function(e) {
+        e.preventDefault(); // avoid to execute the actual submit of the form.
+
+        var data = {
+            name: $('#name').val(),
+            email: $('#email').val(),
+            _token: $("input[name*='_token']").val()
+        };
+
+        $.ajax({
+            type: "POST",
+            url: '{{url('/contactForm')}}',
+            data: data,
+            error: function () {
+                alert('Извините, данные не были переданы');
+            },
+            success: function(data) {
+                alert(data + 'Ваше сообщение получено.\nБлагодарим за интерес к нашим услугам'); // show response from the php script.
+            }
+        });
+    });
+
+    $("#contactFormBottom").submit(function(e) {
+        e.preventDefault(); // avoid to execute the actual submit of the form.
+
+        var data = {
+            name: $('#nameB').val(),
+            email: $('#emailB').val(),
+            _token: $("input[name*='_token']").val()
+        };
+
+        $.ajax({
+            type: "POST",
+            url: '{{url('/contactForm')}}',
+            data: data,
+            error: function () {
+                alert('Извините, данные не были переданы');
+            },
+            success: function(data) {
+                alert(data + 'Ваше сообщение получено.\nБлагодарим за интерес к нашим услугам'); // show response from the php script.
+            }
+        });
+    });
 </script>
 </html>

@@ -137,6 +137,7 @@
             </div>
         </div>
 
+        {{ csrf_field() }}
         <input type="hidden" name="page" value="Идентификация">
 
         <input type="submit" class="large-btn zero" value="Зарегистрироваться">
@@ -151,8 +152,9 @@
         e.preventDefault(); // avoid to execute the actual submit of the form.
 
         var data = {
-            'name': $('#nameInput').val(),
-            'email': $('#emailInput').val()
+            name: $('#nameInput').val(),
+            email: $('#emailInput').val(),
+            _token: $("input[name*='_token']").val()
         };
 
         $.ajax({
