@@ -17,7 +17,7 @@
 
             <div class="article-opened-text col-md-7">
                 <h1>{{$post->title}}</h1>
-                <p>{{$post->text}}</p>
+                <p>{!! $post->text !!}</p>
             </div>
         </div>
     </div>

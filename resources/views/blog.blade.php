@@ -21,7 +21,7 @@
 
                 <p class="date-holder">{{$post->title}}</p>
                 <div class="article-short-text">
-                    <span>{{$post->text}}</span>
+                    <span>{!! $post->text !!}</span>
                 </div>
                 <a href="{{url('article', $post->id)}}" class="more-link">Читать...</a>
             </div>
