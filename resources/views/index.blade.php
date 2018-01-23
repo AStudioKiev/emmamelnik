@@ -57,7 +57,13 @@
             <div class="outer-wrapper">
                 <div class="inner-wrapper">
                     <div class="text-holder">
-                        <span>Эмма Мельник - тренер личностного роста<br>Создатель и Руководитель проектов<br>Автор тренингов и обучающих программ<br>Спортивный судья и тренер 17 чемпионов в Pole Sport<br>Ученик лучших современных мировых  тренеров и психологов.</span>
+                        <span>Эмма Мельник - тренер личностного роста<br>Создатель и Руководитель проектов:
+                            <div class="emmas-projects space-btw">
+                                <a href="https://web-site.kiev.ua/" target="_blank"><img src="img/astudio.png" alt="" width="100%"></a>
+                                <a href="https://emmamelnik.com/" target="_blank"><img src="img/emmamelnic.png" alt="" width="100%"></a>
+                                <a href="https://studio-angels.com/" target="_blank"><img src="img/angels.png" alt="" width="100%"></a>
+                            </div>
+                            Автор тренингов и обучающих программ<br>Спортивный судья и тренер 17 чемпионов в Pole Sport<br>Ученик лучших современных мировых  тренеров и психологов.</span>
                     </div>
                 </div>
             </div>

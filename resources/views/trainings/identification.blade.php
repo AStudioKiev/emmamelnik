@@ -159,7 +159,7 @@
 
         $.ajax({
             type: "POST",
-            url: '{{url('/contactForm')}}',
+            url: "{{url('/contactForm')}}",
             data: data,
             error: function () {
                 alert('Извините, данные не были переданы');

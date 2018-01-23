@@ -84,6 +84,15 @@ a, a:hover, a:focus {
 }
 
 
+.emmas-projects {
+    height: 100px;
+    margin: 20px auto 0 auto;
+    width: 100%;
+    max-width: 300px;
+}
+.emmas-projects>a {
+    width: 80px;
+}
 
 .top-block {
     background-image: url(../img/top_landing.jpg);
@@ -659,9 +668,26 @@ footer .curved-line {
     vertical-align: middle;
 }
 .training-image-holder {
+    -webkit-transition: all 300ms ease-out;
+    -moz-transition: all 300ms ease-out;
+    -o-transition: all 300ms ease-out;
+    transition: all 300ms ease-out;
+    
     width: 100%;
     max-width: 450px;
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
 }
+.training-holder:hover .training-image-holder {
+    -webkit-transition: all 300ms ease-out;
+    -moz-transition: all 300ms ease-out;
+    -o-transition: all 300ms ease-out;
+    transition: all 300ms ease-out;
+    
+    -webkit-filter: grayscale(0%);
+    filter: grayscale(0%);
+}
+
 .training-info-holder {
     width: 100%;
     max-width: 470px;

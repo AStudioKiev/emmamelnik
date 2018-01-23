@@ -27,4 +27,9 @@ class TrainingsController extends Controller
     {
         return view('trainings.identification');
     }
+
+    public function femininity()
+    {
+        return view('trainings.femininity');
+    }
 }

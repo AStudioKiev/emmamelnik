@@ -53,6 +53,7 @@
                     <p class="regular-lg">Каждой, кто знает кого-то более женственного, чем она сама.</p>
 
                     <p class="regular-lg mar-tp-2">Длительность от 2 до 12 часов<br> Практикуется только в мини группах до 6-ти человек.<br> Формат - игра, тренировка, разговор.</p>
+                    <a href="{{url('/trainings/femininity')}}" target="_blank" class="btn-more-holder"><button type="button" class="btn-more-training"></button></a>
                 </div>
             </div>
 
